@@ -84,7 +84,7 @@ export default function PaymentsUICompleteScreen() {
       applePay: true,
       merchantCountryCode: 'US',
       style: 'automatic',
-      googlePay: true,
+      googlePay: false,
       testEnv: true,
       primaryButtonColor: '#635BFF', // Blurple
       returnURL: 'stripe-example://stripe-redirect',

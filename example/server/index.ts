@@ -520,7 +520,7 @@ app.post('/payment-sheet', async (_, res) => {
   );
   const paymentIntent = await stripe.paymentIntents.create({
     amount: 5099,
-    currency: 'usd',
+    currency: 'eur',
     customer: customer.id,
     shipping: {
       name: 'Jane Doe',
@@ -535,13 +535,13 @@ app.post('/payment-sheet', async (_, res) => {
     // Edit the following to support different payment methods in your PaymentSheet
     // Note: some payment methods have different requirements: https://stripe.com/docs/payments/payment-methods/integration-options
     payment_method_types: [
-      'card',
+      // 'card',
       // 'ideal',
       // 'sepa_debit',
       // 'sofort',
       // 'bancontact',
       // 'p24',
-      // 'giropay',
+      'giropay',
       // 'eps',
       // 'afterpay_clearpay',
       // 'klarna',
